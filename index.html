@@ -106,7 +106,9 @@
   <main role="main">
     
     <section class="hero">
-      <video class="hero__video" autoplay muted loop playsinline aria-hidden="true">
+      <!-- TODO: Add hero.mp4 video file to /assets/video/ directory -->
+      <!-- See /assets/video/README.md for video specifications -->
+      <video class="hero__video" autoplay muted loop playsinline aria-hidden="true" onerror="this.style.display='none'">
         <source src="/assets/video/hero.mp4" type="video/mp4">
       </video>
       <img src="/assets/img/restaurant_crowded_w_99428610.jpg" alt="" class="hero__fallback" aria-hidden="true">
