@@ -1,0 +1,16 @@
+{
+  "name": "Opening Night Live",
+  "short_name": "ONL",
+  "description": "Pack your opening night with creator tastings, PR hits, and RSVP funnels that sell out seats.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0E0F14",
+  "theme_color": "#0E0F14",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
