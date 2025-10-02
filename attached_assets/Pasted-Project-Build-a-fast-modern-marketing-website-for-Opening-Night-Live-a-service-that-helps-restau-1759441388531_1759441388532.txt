@@ -1,0 +1,420 @@
+Project: Build a fast, modern marketing website for Opening Night Live — a service that helps restaurants go live and sell out opening night with creator tastings, PR seeding, RSVP funnels, and on-site launch production.
+
+Domain: https://openingnightlive.live
+Primary Contact Email: hello@openingnightlive.live (use in CTAs, schema, and footer)
+
+Tech + Repo
+
+Stack: Pure HTML, CSS, JavaScript (no frameworks, no build tools, zero external UI libs).
+
+Structure:
+/index.html
+/about.html
+/services.html
+/case-studies.html
+/blog.html
+/contact.html
+/404.html
+/assets/css/styles.css
+/assets/js/main.js
+/assets/img/ (logos, webp placeholders, svg)
+/assets/video/hero.mp4 (<=2MB) + fallback.jpg
+/favicon.svg
+/site.webmanifest
+/robots.txt
+/sitemap.xml
+/README.md
+Conventions: Semantic HTML5, BEM CSS, vanilla JS modules, accessible and keyboard-friendly.
+
+Brand & Aesthetic
+
+Name: Opening Night Live
+
+Vibe: Nightlife-meets-hospitality. Sleek, high-contrast, confident. Subtle grain textures and micro-animations.
+
+Palette:
+
+Primary bg: #0E0F14 (ink charcoal)
+
+Accent 1: #E73E33 (neon coral) — buttons/links
+
+Accent 2: #FFD166 (warm highlight) — badges/metrics
+
+Text: #F5F7FA (near-white)
+
+Muted: #8A90A2 (subtext lines)
+
+Type (Google Fonts links, self-hosted okay):
+
+Headlines: Clash Display (fallback: Georgia, serif)
+
+Body/UI: Inter (fallback: system-ui, sans-serif)
+
+Pages & Must-Have Sections
+
+1) Home (index.html)
+
+Sticky Nav: Logo left, anchored links, CTA right: “Get a Launch Plan” → /contact.html.
+
+Hero:
+
+H1: “Pack your opening night.”
+
+Subhead: “We turn new restaurants into the hottest ticket in town with creator tastings, PR hits, and RSVP funnels that sell out seats—fast.”
+
+Primary CTA: “Book a Strategy Call” (mailto:hello@openingnightlive.live)
+
+Secondary CTA: “See Results” → #case-spotlight
+
+Background: short looping hero.mp4 with prefers-reduced-motion fallback image; parallax on scroll.
+
+What We Do (3 cards): Hype Campaigns / Influencer & PR Seeding / Opening-Night Production.
+
+Process (4 steps): Audit → Tease → Announce → Sell-Out (icons + 1-liners).
+
+Countdown Module: Vanilla JS countdown fed by a data-launch="2025-11-15T22:00:00Z" attribute; hides if no date.
+
+Case Study Spotlight: One marquee tile with metrics (e.g., “2,143 RSVPs • 5 local features • $87k opening week”) → detailed page/modal.
+
+Logos/Press Bar: Greyscale until hover.
+
+Testimonials (slider): 3–5 quotes with chef headshots (vanilla JS carousel).
+
+Lead Magnet: “Steal our Opening Night Playbook” (name + email form; honeypot; basic JS validation).
+
+Footer: Quick links, socials, hello@openingnightlive.live, © openingnightlive.live.
+
+2) About
+
+Mission, origin story (short), team grid (3–5), values (taste, speed, ROI).
+
+3) Services
+
+Pricing tables: Starter / Pro / Premiere with feature checkmarks, hover states, and a “Compare plans” toggle.
+
+Detail blocks for: social drip, creator tastings, PR outreach, RSVP landing, street promo, UGC capture, post-launch momentum.
+
+4) Case Studies
+
+Grid (6). Each opens a modal or its own page with: brief, tactics, timeline, before/after metrics, and learnings.
+
+5) Blog
+
+List page (cards). Single post template with share buttons and related posts section.
+
+6) Contact
+
+Multi-Step Form (vanilla JS):
+
+Step 1: Contact + restaurant details
+
+Step 2: Launch timing + budget (select)
+
+Step 3: Goals (checkboxes) + free text
+
+Secondary option: “Email us” mailto:hello@openingnightlive.live.
+
+Calendar Placeholder: Empty <div id="calendar-embed"></div> with TODO to drop in Calendly later.
+
+7) 404
+
+Playful micro-animation; CTA back home.
+
+Components & Interactions
+
+Mobile-first, responsive grid utilities in styles.css.
+
+Smooth anchor scrolling; intersection-based fade-ins; reduced-motion support.
+
+Sticky mobile CTA (“Get a Launch Plan”).
+
+Lightweight modal component for case studies.
+
+Carousel for testimonials & logos (no external dependencies).
+
+“Copy to clipboard” button for PR one-liner.
+
+Forms, Emails, and Placeholders
+
+All forms submit to /# with TODO comments for Formspree/Netlify or backend endpoints.
+
+Honeypot anti-spam field; basic client-side validation; aria-describedby for errors.
+
+Newsletter form ready for Mailchimp/ConvertKit (action URL TODO).
+
+mailto:hello@openingnightlive.live for fallback CTAs.
+
+Copy (seed text)
+
+Tagline: “Opening nights that look sold out—because they are.”
+
+Value bullets: “Creator seeding that actually shows.” “RSVP funnels that convert.” “Media hits without the agency bloat.”
+
+Buttons: “Get a Launch Plan”, “See Results”, “Download Playbook”.
+
+SEO, Social, and Schema (use domain)
+
+Per-page titles/descriptions; canonical URLs under https://openingnightlive.live/*.
+
+Open Graph & Twitter tags with absolute image URLs (e.g., https://openingnightlive.live/assets/img/og.jpg).
+
+JSON-LD:
+
+Organization + LocalBusiness (Dallas, TX placeholder; email: hello@openingnightlive.live)
+
+Service (launch marketing)
+
+FAQPage (pull 4–6 Q&As from Services)
+
+Article (for blog posts)
+
+Event (if a sample launch page exists)
+
+Generate robots.txt and sitemap.xml with correct domain.
+
+Accessibility
+
+WCAG AA color contrast; visible focus states.
+
+Landmark roles (header, nav, main, footer), aria-labels on interactive elements.
+
+Carousels and modals fully keyboard operable; all images have alt.
+
+Performance
+
+Single minifiable CSS and JS; defer JS.
+
+Preload fonts; font-display: swap.
+
+Lazy-load images; prefer WebP with fallbacks; compress hero video.
+
+Inline critical CSS for above-the-fold hero (optional).
+
+Sample Assets & Data
+
+6–8 hero/section images (royalty-free placeholders).
+
+2–3 believable case studies with metrics.
+
+Favicons + site.webmanifest (name: Opening Night Live; theme color: #0E0F14).
+
+README.md (what to include)
+
+How to edit copy, swap images, and change the countdown date (data attribute).
+
+How to hook forms to Formspree/Netlify, and newsletter to Mailchimp.
+
+How to embed Calendly in #calendar-embed.
+
+DNS/Deploy Notes (for DevOps):
+
+Point openingnightlive.live and www.openingnightlive.live to hosting (A/ALIAS for apex, CNAME for www).
+
+Set canonical to the apex https://openingnightlive.live.
+
+Add basic security headers (if host supports): HSTS, X-Content-Type-Options, Referrer-Policy, Permissions-Policy.
+
+Delivery Requirements
+
+All pages valid HTML; no broken links.
+
+Zero external UI dependencies; vanilla JS only.
+
+Ship ready to host on Netlify/Vercel/S3 with correct canonical + sitemap.Conventions: Semantic HTML5, BEM CSS, vanilla JS modules, accessible and keyboard-friendly.
+
+Brand & Aesthetic
+
+Name: Opening Night Live
+
+Vibe: Nightlife-meets-hospitality. Sleek, high-contrast, confident. Subtle grain textures and micro-animations.
+
+Palette:
+
+Primary bg: #0E0F14 (ink charcoal)
+
+Accent 1: #E73E33 (neon coral) — buttons/links
+
+Accent 2: #FFD166 (warm highlight) — badges/metrics
+
+Text: #F5F7FA (near-white)
+
+Muted: #8A90A2 (subtext lines)
+
+Type (Google Fonts links, self-hosted okay):
+
+Headlines: Clash Display (fallback: Georgia, serif)
+
+Body/UI: Inter (fallback: system-ui, sans-serif)
+
+Pages & Must-Have Sections
+
+1) Home (index.html)
+
+Sticky Nav: Logo left, anchored links, CTA right: “Get a Launch Plan” → /contact.html.
+
+Hero:
+
+H1: “Pack your opening night.”
+
+Subhead: “We turn new restaurants into the hottest ticket in town with creator tastings, PR hits, and RSVP funnels that sell out seats—fast.”
+
+Primary CTA: “Book a Strategy Call” (mailto:hello@openingnightlive.live)
+
+Secondary CTA: “See Results” → #case-spotlight
+
+Background: short looping hero.mp4 with prefers-reduced-motion fallback image; parallax on scroll.
+
+What We Do (3 cards): Hype Campaigns / Influencer & PR Seeding / Opening-Night Production.
+
+Process (4 steps): Audit → Tease → Announce → Sell-Out (icons + 1-liners).
+
+Countdown Module: Vanilla JS countdown fed by a data-launch="2025-11-15T22:00:00Z" attribute; hides if no date.
+
+Case Study Spotlight: One marquee tile with metrics (e.g., “2,143 RSVPs • 5 local features • $87k opening week”) → detailed page/modal.
+
+Logos/Press Bar: Greyscale until hover.
+
+Testimonials (slider): 3–5 quotes with chef headshots (vanilla JS carousel).
+
+Lead Magnet: “Steal our Opening Night Playbook” (name + email form; honeypot; basic JS validation).
+
+Footer: Quick links, socials, hello@openingnightlive.live, © openingnightlive.live.
+
+2) About
+
+Mission, origin story (short), team grid (3–5), values (taste, speed, ROI).
+
+3) Services
+
+Pricing tables: Starter / Pro / Premiere with feature checkmarks, hover states, and a “Compare plans” toggle.
+
+Detail blocks for: social drip, creator tastings, PR outreach, RSVP landing, street promo, UGC capture, post-launch momentum.
+
+4) Case Studies
+
+Grid (6). Each opens a modal or its own page with: brief, tactics, timeline, before/after metrics, and learnings.
+
+5) Blog
+
+List page (cards). Single post template with share buttons and related posts section.
+
+6) Contact
+
+Multi-Step Form (vanilla JS):
+
+Step 1: Contact + restaurant details
+
+Step 2: Launch timing + budget (select)
+
+Step 3: Goals (checkboxes) + free text
+
+Secondary option: “Email us” mailto:hello@openingnightlive.live.
+
+Calendar Placeholder: Empty <div id="calendar-embed"></div> with TODO to drop in Calendly later.
+
+7) 404
+
+Playful micro-animation; CTA back home.
+
+Components & Interactions
+
+Mobile-first, responsive grid utilities in styles.css.
+
+Smooth anchor scrolling; intersection-based fade-ins; reduced-motion support.
+
+Sticky mobile CTA (“Get a Launch Plan”).
+
+Lightweight modal component for case studies.
+
+Carousel for testimonials & logos (no external dependencies).
+
+“Copy to clipboard” button for PR one-liner.
+
+Forms, Emails, and Placeholders
+
+All forms submit to /# with TODO comments for Formspree/Netlify or backend endpoints.
+
+Honeypot anti-spam field; basic client-side validation; aria-describedby for errors.
+
+Newsletter form ready for Mailchimp/ConvertKit (action URL TODO).
+
+mailto:hello@openingnightlive.live for fallback CTAs.
+
+Copy (seed text)
+
+Tagline: “Opening nights that look sold out—because they are.”
+
+Value bullets: “Creator seeding that actually shows.” “RSVP funnels that convert.” “Media hits without the agency bloat.”
+
+Buttons: “Get a Launch Plan”, “See Results”, “Download Playbook”.
+
+SEO, Social, and Schema (use domain)
+
+Per-page titles/descriptions; canonical URLs under https://openingnightlive.live/*.
+
+Open Graph & Twitter tags with absolute image URLs (e.g., https://openingnightlive.live/assets/img/og.jpg).
+
+JSON-LD:
+
+Organization + LocalBusiness (Dallas, TX placeholder; email: hello@openingnightlive.live)
+
+Service (launch marketing)
+
+FAQPage (pull 4–6 Q&As from Services)
+
+Article (for blog posts)
+
+Event (if a sample launch page exists)
+
+Generate robots.txt and sitemap.xml with correct domain.
+
+Accessibility
+
+WCAG AA color contrast; visible focus states.
+
+Landmark roles (header, nav, main, footer), aria-labels on interactive elements.
+
+Carousels and modals fully keyboard operable; all images have alt.
+
+Performance
+
+Single minifiable CSS and JS; defer JS.
+
+Preload fonts; font-display: swap.
+
+Lazy-load images; prefer WebP with fallbacks; compress hero video.
+
+Inline critical CSS for above-the-fold hero (optional).
+
+Sample Assets & Data
+
+6–8 hero/section images (royalty-free placeholders).
+
+2–3 believable case studies with metrics.
+
+Favicons + site.webmanifest (name: Opening Night Live; theme color: #0E0F14).
+
+README.md (what to include)
+
+How to edit copy, swap images, and change the countdown date (data attribute).
+
+How to hook forms to Formspree/Netlify, and newsletter to Mailchimp.
+
+How to embed Calendly in #calendar-embed.
+
+DNS/Deploy Notes (for DevOps):
+
+Point openingnightlive.live and www.openingnightlive.live to hosting (A/ALIAS for apex, CNAME for www).
+
+Set canonical to the apex https://openingnightlive.live.
+
+Add basic security headers (if host supports): HSTS, X-Content-Type-Options, Referrer-Policy, Permissions-Policy.
+
+Delivery Requirements
+
+All pages valid HTML; no broken links.
+
+Zero external UI dependencies; vanilla JS only.
+
+Ship ready to host on Netlify/Vercel/S3 with correct canonical + sitemap.
+Do NOT use React, Tailwind, Bootstrap, jQuery, or any build step.
